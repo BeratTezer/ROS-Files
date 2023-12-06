@@ -1,14 +1,13 @@
 # ROS_Files
 
 ## Creating a catkin Package
-Go to the path: "catkin_ws/src". If not exist, create manually.
-Then write and run this line: "catkin_create_pkg beginner_tutorials std_msgs rospy roscpp"
-Then the tutorial files will be created.
-
+Go to the path: "catkin_ws/src". If not exist, create manually.<br>
+Then write and run this line: "catkin_create_pkg beginner_tutorials std_msgs rospy roscpp"<br>
+Then the tutorial files will be created.<br>
 
 ## Creating Nodes in "roscore"
-With this command "rosrun turtlesim turtlesim_node", we will be created one ros node.
-To move the turtle, "rosrun turtlesim turtle_teleop_key" and use arrow keys.
+With this command "rosrun turtlesim turtlesim_node", we will be created one ros node.<br>
+To move the turtle, "rosrun turtlesim turtle_teleop_key" and use arrow keys.<br>
 
 	Rosnode Commands:
 		- rosnode list -> list active nodes
