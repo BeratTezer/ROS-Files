@@ -16,3 +16,15 @@ To move the turtle, "rosrun turtlesim turtle_teleop_key" and use arrow keys.
 		- rosnode machine -> list nodes running on a particular machine or list machines
 		- rosnode kill -> kill a running node
 		- rosnode cleanup -> purge registration information of unreachable nodes
+
+	Rostopic Commands:
+		- rostopic bw -> display bandwidth used by topic
+		- rostopic delay -> display delay of topic from timestamp in header
+		- rostopic echo -> print messages to screen
+		- rostopic find -> find topics by type
+		- rostopic hz -> display publishing rate of topic
+		- rostopic info -> print information about active topic
+		- rostopic list -> list active topics
+		- rostopic pub -> publish data to topic
+		- rostopic type -> print topic or field type
+
