@@ -9,6 +9,7 @@ Then the tutorial files will be created.
 ## Creating Nodes in "roscore"
 With this command "rosrun turtlesim turtlesim_node", we will be created one ros node.
 To move the turtle, "rosrun turtlesim turtle_teleop_key" and use arrow keys.
+
 	Rosnode Commands:
 		- rosnode list -> list active nodes
 		- rosnode ping -> test connectivity to node
