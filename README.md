@@ -29,9 +29,12 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 11. Now we are ready to create ros packages. Go to the under src file. Start with the following line "catkin_create_pkg new_package_ros"
 12. Then go to the upper directory and write "catkin_make" 
 13. Final step: Add workspace to the ROS environmet ". ~/Desktop/ROS_Files/my_workspace_ros/devel/setup.bash"
-
+<br><br><br>
 ### Creating Publisher and Subscriber Nodes and Connect
 #### Through a Topic in Python
+
+1. "gedit ~/.bashrc" check the ROS environment is sourced. At the end you must see "source /opt/ros/melodic/setup.bash". If you don't, add manually or go to step 2 in previous section.
+2. Create work
 
 
 
