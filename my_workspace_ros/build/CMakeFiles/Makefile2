@@ -405,6 +405,56 @@ clean: gtest/googlemock/gtest/CMakeFiles/gtest.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory new_package_ros
+
+# Convenience name for "all" pass in the directory.
+new_package_ros/all:
+
+.PHONY : new_package_ros/all
+
+# Convenience name for "clean" pass in the directory.
+new_package_ros/clean: new_package_ros/CMakeFiles/_catkin_empty_exported_target.dir/clean
+
+.PHONY : new_package_ros/clean
+
+# Convenience name for "preinstall" pass in the directory.
+new_package_ros/preinstall:
+
+.PHONY : new_package_ros/preinstall
+
+#=============================================================================
+# Target rules for target new_package_ros/CMakeFiles/_catkin_empty_exported_target.dir
+
+# All Build rule for target.
+new_package_ros/CMakeFiles/_catkin_empty_exported_target.dir/all:
+	$(MAKE) -f new_package_ros/CMakeFiles/_catkin_empty_exported_target.dir/build.make new_package_ros/CMakeFiles/_catkin_empty_exported_target.dir/depend
+	$(MAKE) -f new_package_ros/CMakeFiles/_catkin_empty_exported_target.dir/build.make new_package_ros/CMakeFiles/_catkin_empty_exported_target.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/berat/Desktop/ROS_Files/my_workspace_ros/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
+.PHONY : new_package_ros/CMakeFiles/_catkin_empty_exported_target.dir/all
+
+# Build rule for subdir invocation for target.
+new_package_ros/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/berat/Desktop/ROS_Files/my_workspace_ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 new_package_ros/CMakeFiles/_catkin_empty_exported_target.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/berat/Desktop/ROS_Files/my_workspace_ros/build/CMakeFiles 0
+.PHONY : new_package_ros/CMakeFiles/_catkin_empty_exported_target.dir/rule
+
+# Convenience name for target.
+_catkin_empty_exported_target: new_package_ros/CMakeFiles/_catkin_empty_exported_target.dir/rule
+
+.PHONY : _catkin_empty_exported_target
+
+# clean rule for target.
+new_package_ros/CMakeFiles/_catkin_empty_exported_target.dir/clean:
+	$(MAKE) -f new_package_ros/CMakeFiles/_catkin_empty_exported_target.dir/build.make new_package_ros/CMakeFiles/_catkin_empty_exported_target.dir/clean
+.PHONY : new_package_ros/CMakeFiles/_catkin_empty_exported_target.dir/clean
+
+# clean rule for target.
+clean: new_package_ros/CMakeFiles/_catkin_empty_exported_target.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.

@@ -25,7 +25,15 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 7. Give the path of setup.bash under devel file. "source ~/Desktop/ROS_Files/my_workspace_ros/devel/setup.bash"
 8. Verify our workspace overlays the ROS workspace. Type "echo $ROS_PACKAGE_PATH" then if there is a result like "~/Desktop/ROS_Files/my_workspace_ros/src:/opt/ros/melodic/share" that means its okay.
 9. Write "echo "source ~/Desktop/ROS_Files/my_workspace_ros/devel/setup.bash" >> ~/.bashrc" to won't give the source again and again as we perviously do in step 3.
-10. Check the code "gedit ~/.bashrc". If there is the line we wrote at the bottom that means its clear.
+10. Check the code "gedit ~/.bashrc". If there is the line we wrote at the bottom that means its alright. If you are going to DELETE your workspace, don't forget to clean "bashrc" file.
+11. Now we are ready to create ros packages. Go to the under src file. Start with the following line "catkin_create_pkg new_package_ros"
+12. Then go to the upper directory and write "catkin_make" 
+13. Final step: Add workspace to the ROS environmet ". ~/Desktop/ROS_Files/my_workspace_ros/devel/setup.bash"
+
+### Creating Publisher and Subscriber Nodes and Connect
+#### Through a Topic in Python
+
+
 
 <br><br><br>
 

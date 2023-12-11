@@ -35,3 +35,11 @@
 /home/berat/Desktop/ROS_Files/my_workspace_ros/build/gtest/googlemock/gtest/CMakeFiles/list_install_components.dir
 /home/berat/Desktop/ROS_Files/my_workspace_ros/build/gtest/googlemock/gtest/CMakeFiles/gtest.dir
 /home/berat/Desktop/ROS_Files/my_workspace_ros/build/gtest/googlemock/gtest/CMakeFiles/rebuild_cache.dir
+/home/berat/Desktop/ROS_Files/my_workspace_ros/build/new_package_ros/CMakeFiles/install/strip.dir
+/home/berat/Desktop/ROS_Files/my_workspace_ros/build/new_package_ros/CMakeFiles/install/local.dir
+/home/berat/Desktop/ROS_Files/my_workspace_ros/build/new_package_ros/CMakeFiles/test.dir
+/home/berat/Desktop/ROS_Files/my_workspace_ros/build/new_package_ros/CMakeFiles/list_install_components.dir
+/home/berat/Desktop/ROS_Files/my_workspace_ros/build/new_package_ros/CMakeFiles/edit_cache.dir
+/home/berat/Desktop/ROS_Files/my_workspace_ros/build/new_package_ros/CMakeFiles/_catkin_empty_exported_target.dir
+/home/berat/Desktop/ROS_Files/my_workspace_ros/build/new_package_ros/CMakeFiles/rebuild_cache.dir
+/home/berat/Desktop/ROS_Files/my_workspace_ros/build/new_package_ros/CMakeFiles/install.dir
