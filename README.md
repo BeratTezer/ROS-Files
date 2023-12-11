@@ -6,9 +6,13 @@ Then write and run this line: "catkin_create_pkg beginner_tutorials std_msgs ros
 Then the tutorial files will be created.<br>
 
 ## Creating Nodes in "roscore"
-With this command "rosrun turtlesim turtlesim_node", we will be created one ros node.<br>
-To move the turtle, "rosrun turtlesim turtle_teleop_key" and use arrow keys.<br>
+First write "roscore", it will start a master.<br>
+Then go to the new terminal<br>
+To create a turtle, write "rosrun turtlesim turtlesim_node"<br>
+Then go to new termial and write "rosrun turtlesim turtle_teleop_key". This terminal will read commands and rotate the turtle.<br>
+To visualize the connection as a graph, write "rosrun rqt_graph rqt_graph"<br>
 
+<br><br><br>
 	Rosnode Commands:
 		- rosnode list -> list active nodes
 		- rosnode ping -> test connectivity to node
