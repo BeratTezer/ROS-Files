@@ -19,7 +19,7 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 1. Start by giving the source"source /opt/ros/melodic/setup.bash"
 2. Configurations the bash script "gedit ~/.bashrc"
 3. "echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc" thus this line you don't have to write "source /opt/ros/melodic/setup.bash" again and again.(It automatically source our ros enviroment when terminal starts)
-4. Ready to setup our workspace
+4. Ready to setup our workspace.
 5. Create a directory and sub-directory. (mkdir -p my_ros_project/src)
 6. Go to the directory and write "catkin_make"
 7. Give the path of setup.bash under devel file. "source ~/Desktop/ROS_Files/my_workspace_ros/devel/setup.bash"
@@ -34,7 +34,18 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 #### Through a Topic in Python
 
 1. "gedit ~/.bashrc" check the ROS environment is sourced. At the end you must see "source /opt/ros/melodic/setup.bash". If you don't, add manually or go to step 2 in previous section.
-2. Create work
+2. Create workspace. "mkdir -p {full path or go to your main file and create new file like ros workspace}testros/src" (testros is the name of our workspace)
+3. Go to the file. Write "catkin_make"
+4. Then add the source "source ~/Desktop/ROS_Files/testros/devel/setup.bash"
+5. Check the "echo $ROS_PACKAGE_PATH"
+6. Then go to sub directory "src". To create the package, write "catkin_create_pkg test_ros std_msg rospy roscpp". In this line you can change the "test_ros" part.
+7. This step might be unneccessariy. But the documents use this way.
+8. Go to orinigal directory, I mean our main file (go back to the workspace). Write "catkin_make" again.
+9. We will see a line we didn't see before. (Processing catkin package: '{file-name}'", this name going to be same as we gave in step 6)
+10. Add the source again. ". devel/setup.bash". At this step, I was in directory we create in 2. step.
+11. Go to the sub directory: "cd src/test_ros". It's under the testros file.
+12. Then create a sub folder named "python_script". To do it write this: "mkdir python_script". Go to the file we created. Write "gedit publisher_node.py"
+13. 
 
 
 
