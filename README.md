@@ -45,7 +45,8 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 10. Add the source again. ". devel/setup.bash". At this step, I was in directory we create in 2. step.
 11. Go to the sub directory: "cd src/test_ros". It's under the testros file.
 12. Then create a sub folder named "python_script". To do it write this: "mkdir python_script". Go to the file we created. Write "gedit publisher_node.py"
-13. 
+13. Fill the "publisher_node.py". I added the example code with same name.
+14. Change the access and executable rights, make the file executable. "chmod -x publisher_node.py" for this code.
 
 
 
