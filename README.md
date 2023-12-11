@@ -16,17 +16,17 @@ Getting the type of a node "rostopic type /turle1/cmd_vel" (cmd rostopic type {n
 To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (rosmsg show {node type})<br><br><br>
 
 ### Create Catkin Workspace and Create Packages
-	1- "source /opt/ros/melodic/setup.bash"
-	2- Configurations the bash script "gedit ~/.bashrc"
-	3- "echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc" thus this line you don't have to write "source /opt/ros/melodic/setup.bash" again and again.(It automatically source our ros enviroment when terminal starts)
-	4- Ready to setup our workspace
-	5- Create a directory and sub-directory. (mkdir -p my_ros_project/src)
-	6- Go to the directory and write "catkin_make"
-	7- Give the path of setup.bash under devel file. "source ~/Desktop/ROS_Files/my_workspace_ros/devel/setup.bash"
-	8- Verify our workspace overlays the ROS workspace. Type "echo $ROS_PACKAGE_PATH" then if there is a result like "~/Desktop/ROS_Files/my_workspace_ros/src:/opt/ros/melodic/share" that means its okay.
-	9- Write "echo "source ~/Desktop/ROS_Files/my_workspace_ros/devel/setup.bash" >> ~/.bashrc" to won't give the source again and again as we perviously do in step 3.
-	10- Check the code "gedit ~/.bashrc". If there is the line we wrote at the bottom that means its clear.
-	
+	1- "source /opt/ros/melodic/setup.bash"<br>
+	2- Configurations the bash script "gedit ~/.bashrc"<br>
+	3- "echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc" thus this line you don't have to write "source /opt/ros/melodic/setup.bash" again and again.(It automatically source our ros enviroment when terminal starts)<br>
+	4- Ready to setup our workspace<br>
+	5- Create a directory and sub-directory. (mkdir -p my_ros_project/src)<br>
+	6- Go to the directory and write "catkin_make"<br>
+	7- Give the path of setup.bash under devel file. "source ~/Desktop/ROS_Files/my_workspace_ros/devel/setup.bash"<br>
+	8- Verify our workspace overlays the ROS workspace. Type "echo $ROS_PACKAGE_PATH" then if there is a result like "~/Desktop/ROS_Files/my_workspace_ros/src:/opt/ros/melodic/share" that means its okay.<br>
+	9- Write "echo "source ~/Desktop/ROS_Files/my_workspace_ros/devel/setup.bash" >> ~/.bashrc" to won't give the source again and again as we perviously do in step 3.<br>
+	10- Check the code "gedit ~/.bashrc". If there is the line we wrote at the bottom that means its clear.<br>
+
 
 <br><br><br>
 
