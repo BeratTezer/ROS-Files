@@ -50,21 +50,21 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 15. Edit the "CMakeLists.txt" file. To do this, write "gedit CMakeLists.txt".
 16. Find these lines.
 <p>
-	## Mark executable scripts (Python etc.) for installation
-	## in contrast to setup.py, you can choose the destination
-	# catkin_install_python(PROGRAMS
-	#   scripts/my_python_script
-	#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-	# )
+	## Mark executable scripts (Python etc.) for installation<br>
+	## in contrast to setup.py, you can choose the destination<br>
+	# catkin_install_python(PROGRAMS<br>
+	#   scripts/my_python_script<br>
+	#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}<br>
+	# )<br>
 </p>
 17. Change the code as I do below.
 <p>
-	## Mark executable scripts (Python etc.) for installation
-	## in contrast to setup.py, you can choose the destination
-	catkin_install_python(PROGRAMS
-	  python_script/publisher_node.py # {this is your python scripts path. Better you give the full path}
-	  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-	)
+	## Mark executable scripts (Python etc.) for installation<br>
+	## in contrast to setup.py, you can choose the destination<br>
+	catkin_install_python(PROGRAMS<br>
+	  python_script/publisher_node.py # {this is your python scripts path. Better you give the full path}<br>
+	  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}<br>
+	)<br>
 </p>
 18. Test the publisher node.
 
