@@ -46,8 +46,23 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 11. Go to the sub directory: "cd src/test_ros". It's under the testros file.
 12. Then create a sub folder named "python_script". To do it write this: "mkdir python_script". Go to the file we created. Write "gedit publisher_node.py"
 13. Fill the "publisher_node.py". I added the example code with same name.
-14. Change the access and executable rights, make the file executable. "chmod -x publisher_node.py" for this code.
-
+14. Change the access and executable rights, make the file executable. "chmod +x publisher_node.py" for this code.
+15. Edit the "CMakeLists.txt" file. To do this, write "gedit CMakeLists.txt".
+16. Find these lines. 
+	## Mark executable scripts (Python etc.) for installation
+	## in contrast to setup.py, you can choose the destination
+	# catkin_install_python(PROGRAMS
+	#   scripts/my_python_script
+	#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+	# )
+17. Change the code as I do below.
+	## Mark executable scripts (Python etc.) for installation
+	## in contrast to setup.py, you can choose the destination
+	catkin_install_python(PROGRAMS
+	  python_script/publisher_node.py # {this is your python scripts path. Better you give the full path}
+	  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+	)
+18. Test the publisher node.
 
 
 <br><br><br>
