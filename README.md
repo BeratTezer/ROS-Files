@@ -53,8 +53,8 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 		## Mark executable scripts (Python etc.) for installation<br>
 		## in contrast to setup.py, you can choose the destination<br>
 		# catkin_install_python(PROGRAMS<br>
-		#   scripts/my_python_script<br>
-		#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}<br>
+		#&nbsp&nbsp&nbspscripts/my_python_script<br>
+		#&nbsp&nbsp&nbspDESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}<br>
 		# )<br>
 	</p>
 17. Change the code as I do below.
@@ -62,8 +62,8 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 		## Mark executable scripts (Python etc.) for installation<br>
 		## in contrast to setup.py, you can choose the destination<br>
 		catkin_install_python(PROGRAMS<br>
-		python_script/publisher_node.py # {this is your python scripts path. Better you give the full path}<br>
-		DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}<br>
+		&nbsp&nbsp&nbsppython_script/publisher_node.py # {this is your python scripts path. Better you give the full path}<br>
+		&nbsp&nbsp&nbspDESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}<br>
 		)<br>
 	</p>
 18. Test the publisher node.
