@@ -96,7 +96,24 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 #### Robotics and Computer Vision in Python
 1. Make sure your camera is working.
 2. Open a terminal, type "ls /dev/|grep video". If we can see video0 output, its how it should be.
-3. Write "sudo apt install ros-melodic-usb-cam"
+3. Write "sudo apt install ros-melodic-usb-cam". This willl install ROS cam files.
+4. Write "sudo apt install ros-melodic-perception". This willl install ROS OpenCV and some perception files.
+5. Verify ROS environment is sourced. Write "gedit ~/.bashrc". Go to the end of the file and see this "source /opt/ros/melodic/setup.bash". If you can't see, add manually and save the file.
+6. Create a workspace. Write following lines step by step.
+	* "mkdir -p ~/ros_open_cv_ws/src"
+	* "cd ~/ros_open_cv_ws"
+	* "catkin_make"
+	* "soruce ~/ros_open_cv_ws/devel/setup.bash"
+	* "echo $ROS_PACKAGE_PATH" (~/ros_open_cv_ws/src:/opt/ros/melodic/share)
+7. Create a catkin package and nodes.
+	* "cd ~/ros_open_cv_ws/src"
+	* "catkin_create_pkg ros_opencv image_transport cv_bridge sensor_msgs rospy roscpp std_msgs" (After the ros_opencv, rest of them are dependenies of the package. First thing we write is our command, and the second one is our package name which is ros_opencv)
+	* Go to inside of the "ros_opencv" file
+	* "mkdir python_scripts"
+	* "cd python_scripts"
+	* "gedit camera_publisher.py" (You can copy and paste it from ROS-OpenCV file)
+	* "chmod +x camera_publisher.py"
+	* ""
 
 
 ### Rosnode Commands:
