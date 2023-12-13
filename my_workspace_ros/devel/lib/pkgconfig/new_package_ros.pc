@@ -1,8 +1,0 @@
-prefix=/home/berat/Desktop/ROS_Files/my_workspace_ros/devel
-
-Name: new_package_ros
-Description: Description of new_package_ros
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

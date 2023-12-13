@@ -1,8 +1,0 @@
-prefix=/home/berat/Desktop/ROS_Files/testros/install
-
-Name: test_ros
-Description: Description of test_ros
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

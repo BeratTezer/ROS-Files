@@ -66,8 +66,10 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 		&nbsp&nbsp&nbspDESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}<br>
 		)<br>
 	</p>
-18. Test the publisher node.
-
+18. Test the publisher node. Now we neeed to run our master ros. Go to a new terminal and type "roscore".
+19. Go to the new terminal and go to test_ros path. Then type the test python script. Write "rosrun test_ros publisher_node.py" (If it says "Error: package 'test_ros' not found" write this and try again: "source ~/testros/devel/setup.bash
+")
+20. Then it's 
 
 <br><br><br>
 

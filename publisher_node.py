@@ -8,7 +8,7 @@ import rospy
 
 # We will publish integer messages, and consequently from ROS standart message package called std_msg we need to import Int32
 
-from std_msg.msg import Int32
+from std_msgs.msg import Int32
 
 nodeName = 'messagepublisher'
 topicName = 'information'
@@ -22,7 +22,7 @@ rospy.init_node(nodeName, anonymous=True)
 # This code line is saying that our node publishing to hte topicName, the messages is of type Int32.
 # "queue_size = 5" means that we limit the number of queued messages if subscriber cannot receive them fast enough.
 
-publisher1 = ropsy.Publisher(topicname, Int32, queue_size=5)
+publisher1 = rospy.Publisher(topicName, Int32, queue_size=5)
 
 # Here we set the mesasge rate in Hz that is, we are publishing with the set frequency in Hz. For example 2Hz means that we are publishing two messages per second.
 
@@ -41,5 +41,4 @@ while not rospy.is_shutdown():
 	intMessage = intMessage+1
 
 	# Here wait to make sure that the desired publishing rate is achieved
-	ratePublisher.sleep()
 	ratePublisher.sleep()
