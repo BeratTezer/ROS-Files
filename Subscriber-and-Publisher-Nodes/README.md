@@ -1,6 +1,5 @@
-Scripts:
-	Publisher Node:
-<code>
+# Scripts:
+## Publisher Node:
 	#!/usr/bin/env python3
 
 	# This line means that this is the Python file and it should be executed by the executed by the Python interpreter.
@@ -45,10 +44,8 @@ Scripts:
 
 		# Here wait to make sure that the desired publishing rate is achieved
 		ratePublisher.sleep()
-</code>
 
-	Subscriber Node:
-<code>
+## Subscriber Node:
 	#!/usr/bin/env python2.7
 
 	import rospy
@@ -77,4 +74,3 @@ Scripts:
 
 	# This function doesn't return until the node is stopped that is, it serves as a while loop.
 	rospy.spin()
-</code>

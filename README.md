@@ -113,7 +113,9 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 	* "cd python_scripts"
 	* "gedit camera_publisher.py" (You can copy and paste it from ROS-OpenCV file)
 	* "chmod +x camera_publisher.py"
-	* ""
+	* "gedit camera_subscriber.py" (You can copy and paste it from ROS-OpenCV file)
+	* "chmod +x camera_subscriber.py"
+	* 
 
 
 ### Rosnode Commands:
