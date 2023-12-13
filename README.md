@@ -69,7 +69,10 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 18. Test the publisher node. Now we neeed to run our master ros. Go to a new terminal and type "roscore".
 19. Go to the new terminal and go to test_ros path. Then type the test python script. Write "rosrun test_ros publisher_node.py" (If it says "Error: package 'test_ros' not found" write this and try again: "source ~/testros/devel/setup.bash
 ")
-20. Then it's 
+20. Then go to the new terminal. Each we go to the new terminal, we gotta give our source again and again for our current project. Write "source ~/testros/devel/setup.bash".
+21. We check the rostopics. Type "rostopic list" and check your list. Now we should see /information, /rosout and /rosout_agg. Last two of them are created with "roscore" but the new one, I mean /information, it's our publisher_node.py file. If we check, we can see the "topicName" inside of the publisher file. That mean we can easily change it's name but we won't do that. Let's create a subsricber for our publisher.
+22. Go to the "python_scripts" folder. Write "gedit subscriber_node.py" then copy the content of shared file above.
+
 
 <br><br><br>
 
