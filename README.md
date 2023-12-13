@@ -94,7 +94,9 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 
 ### ROS and OpenCV
 #### Robotics and Computer Vision in Python
-1. 
+1. Make sure your camera is working.
+2. Open a terminal, type "ls /dev/|grep video". If we can see video0 output, its how it should be.
+3. Write "sudo apt install ros-melodic-usb-cam"
 
 
 ### Rosnode Commands:
