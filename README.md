@@ -30,9 +30,9 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 12. Then go to the upper directory and write "catkin_make" 
 13. Final step: Add workspace to the ROS environmet ". ~/Desktop/ROS_Files/my_workspace_ros/devel/setup.bash"
 <br><br><br>
-### Creating Publisher and Subscriber Nodes and Connect
-#### Through a Topic in Python
 
+### Creating Publisher and Subscriber Nodes and Connect
+#### Through a Topic in Python (File: Subscriber-and-Publisher-Nodes)
 1. "gedit ~/.bashrc" check the ROS environment is sourced. At the end you must see "source /opt/ros/melodic/setup.bash". If you don't, add manually or go to step 2 in previous section.
 2. Create workspace. "mkdir -p {full path or go to your main file and create new file like ros workspace}testros/src" (testros is the name of our workspace)
 3. Go to the file. Write "catkin_make"
@@ -72,9 +72,30 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 20. Then go to the new terminal. Each we go to the new terminal, we gotta give our source again and again for our current project. Write "source ~/testros/devel/setup.bash".
 21. We check the rostopics. Type "rostopic list" and check your list. Now we should see /information, /rosout and /rosout_agg. Last two of them are created with "roscore" but the new one, I mean /information, it's our publisher_node.py file. If we check, we can see the "topicName" inside of the publisher file. That mean we can easily change it's name but we won't do that. Let's create a subsricber for our publisher.
 22. Go to the "python_scripts" folder. Write "gedit subscriber_node.py" then copy the content of shared file above.
-
-
+23. Make the subscriber_node.py rights the executable too -> "chmod +x subscriber_node.py"
+24. Now we will update the "CMakeLists.txt". Write "gedit CMakeLists.txt", add the subscriber python script.
+	<p>
+		## Mark executable scripts (Python etc.) for installation<br>
+		## in contrast to setup.py, you can choose the destination<br>
+		catkin_install_python(PROGRAMS<br>
+		&nbsp&nbsp&nbsppython_script/publisher_node.py # {this is your python scripts path. Better you give the full path}<br>
+		&nbsp&nbsp&nbsppython_script/subscriber_node.py # {this is your python scripts path. Better you give the full path}<br>
+		&nbsp&nbsp&nbspDESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}<br>
+		)<br>
+	</p>
+25. TESTING: Do these.
+	* roscore
+	* Go to new terminal. Write "source ~/testros/devel/setup.bash"
+	* Then write "rosrun test_ros publisher_node.py"
+	* Go to new terminal. Write "source ~/testros/devel/setup.bash"
+	* Then write "rosrun test_ros subscriber_node.py"
+	* In the last terminal, we will see each received messages.
 <br><br><br>
+
+### ROS and OpenCV
+#### Robotics and Computer Vision in Python
+1. 
+
 
 ### Rosnode Commands:
 	- rosnode list -> list active nodes
