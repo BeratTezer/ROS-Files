@@ -1,19 +1,19 @@
 # ROS_Files
 
 ## Creating a catkin Package
-Go to the path: "catkin_ws/src". If not exist, create manually.<br>
-Then write and run this line: "catkin_create_pkg beginner_tutorials std_msgs rospy roscpp"<br>
-Then the tutorial files will be created.<br>
+1. Go to the path: "catkin_ws/src". If not exist, create manually.
+2. Then write and run this line: "catkin_create_pkg beginner_tutorials std_msgs rospy roscpp"
+3. Then the tutorial files will be created.
 
 ## Creating Nodes in "roscore"
-First write "roscore", it will start a master.<br>
-Then go to the new terminal<br>
-To create a turtle, write "rosrun turtlesim turtlesim_node"<br>
-Then go to new termial and write "rosrun turtlesim turtle_teleop_key". This terminal will read commands and rotate the turtle.<br>
-To visualize the connection as a graph, write "rosrun rqt_graph rqt_graph"<br>
-Getting the list of publishers and subsricbers "rostopic list -v"<br>
-Getting the type of a node "rostopic type /turle1/cmd_vel" (cmd rostopic type {node name})<br>
-To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (rosmsg show {node type})<br><br><br>
+1. First write "roscore", it will start a master.
+2. Then go to the new terminal
+3. To create a turtle, write "rosrun turtlesim turtlesim_node"
+4. Then go to new termial and write "rosrun turtlesim turtle_teleop_key". This terminal will read commands and rotate the turtle.
+5. To visualize the connection as a graph, write "rosrun rqt_graph rqt_graph"
+6. Getting the list of publishers and subsricbers "rostopic list -v"
+7. Getting the type of a node "rostopic type /turle1/cmd_vel" (cmd rostopic type {node name})
+8. To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (rosmsg show {node type})
 
 ### Create Catkin Workspace and Create Packages
 1. Start by giving the source"source /opt/ros/melodic/setup.bash"
@@ -29,7 +29,6 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 11. Now we are ready to create ros packages. Go to the under src file. Start with the following line "catkin_create_pkg new_package_ros"
 12. Then go to the upper directory and write "catkin_make" 
 13. Final step: Add workspace to the ROS environmet ". ~/Desktop/ROS_Files/my_workspace_ros/devel/setup.bash"
-<br><br><br>
 
 ### Creating Publisher and Subscriber Nodes and Connect
 #### Through a Topic in Python (File: Subscriber-and-Publisher-Nodes)
