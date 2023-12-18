@@ -111,9 +111,9 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 	* Go to inside of the "ros_opencv" file
 	* "mkdir python_scripts"
 	* "cd python_scripts"
-	* "gedit camera_publisher.py" (You can copy and paste it from ROS-OpenCV file)
+	* "gedit camera_publisher.py" (You can copy and paste it from ROS-OpenCV-Capture-Publisher file)
 	* "chmod +x camera_publisher.py"
-	* "gedit camera_subscriber.py" (You can copy and paste it from ROS-OpenCV file)
+	* "gedit camera_subscriber.py" (You can copy and paste it from ROS-OpenCV-Capture-Publisher file)
 	* "chmod +x camera_subscriber.py"
 	* "gedit CMakeLists.txt" (Add the python scripts under Installation)
 	* Go to "cd ~/ros_open_cv_ws" and type "catkin_make"
@@ -143,8 +143,36 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 9. Now it's working. To see that, run "rostopic echo /chatter"
 
 #### Python ROS Publisher and Subscriber Nodes and Interface with Arduino
-1. 
-
+|Python Publisher|->|ROS|->|Arduino|->|ROS|->|Python Subscriber|
+- Python script publishes integer to topic as "information"
+- Arduino subscribes and receives integers from topic "information"
+- Arduino multiplies integers by 2 and publishs the results to topic "info_back"
+- Python script subscribes to topic "info_back" and prints the results on the screen
+1. Open a terminal
+	* "mkdir ~p ~/ros_arduino_ws/src"
+	* "cd ~/ros_arduino_ws"
+2. Create package
+	* "catkin_make"
+	* "source ~/ros_arduino_ws/devel/setup.bash"
+	* "cd ~/ros_arduino_ws/src"
+	* "catkin_create_pkg arduino_test_comm std_msgs rospy roscpp"
+3. Create publisher and subscriber files
+	* "cd ~/ros_arduino_ws/src/arduino_test_comm/src"
+	* "gedit publisherArduino.py"
+	* "gedit subscriberArduino.py"
+	* Now we will write the code. You can easily copy and paste it from Arduino-Interface-Communication folder.
+	* Set the execution privileges for both files
+		- "chmod +x publisherArduino.py"
+		- "chmod +x subscriberArduino.py"
+	* Create a new Arduino Sketch named "arduino_communication" and fill the file.
+		- You can also find it in README.md file in Arduino-Interface-Communication folder.
+4. Check the port name. It should be "/dev/ttyACM0"
+5. TESTING:
+	* Go to the terminal and write "roscore"
+	* Open a new one and run "sudo chmod 666 /dev/ttyACM0"
+	* Then run "rosrun rosserial_python serial_node.py /dev/ttyACM0" this start the "serial_node.py"
+	* Then open a new terminal then run "rosrun arduino_test_comm publisherArduino.py"
+	* Start the subscriber node. Open a new terminal; "source ~/ros_arduino_ws/devel/setup.bash" and write "rosrun arduino_test_comm subscriberArduino.py"
 
 
 
