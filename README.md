@@ -141,7 +141,14 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 7. Set the porper permissions for our communication port. 
 	
 
-### Rosnode Commands:
+
+
+
+
+
+	
+### Commands
+#### Rosnode Commands:
 	- rosnode list -> list active nodes
 	- rosnode ping -> test connectivity to node
 	- rosnode info -> print information about node
@@ -149,7 +156,7 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 	- rosnode kill -> kill a running node
 	- rosnode cleanup -> purge registration information of unreachable nodes
 
-### Rostopic Commands:
+#### Rostopic Commands:
 	- rostopic bw -> display bandwidth used by topic
 	- rostopic delay -> display delay of topic from timestamp in header
 	- rostopic echo -> print messages to screen
