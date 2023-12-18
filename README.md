@@ -145,7 +145,7 @@
 #### Python ROS Publisher and Subscriber Nodes and Interface with Arduino
  Nodes | Python Publisher | ROS | Arduino | ROS | Python Subscriber |
 --- | --- | --- | --- |--- |---
-Explanation | Python script publishes integer to topic as "information" | | Arduino subscribes and receives integers from topic "information". Arduino multiplies integers by 2 and publishs the results to topic "info_back" |  | Python script subscribes to topic "info_back" and prints the results on the screen | 
+Explanation | Python script publishes integer to topic as "information" | -> | Arduino subscribes and receives integers from topic "information". Arduino multiplies integers by 2 and publishs the results to topic "info_back" | -> | Python script subscribes to topic "info_back" and prints the results on the screen | 
 1. Open a terminal
 	* "mkdir ~p ~/ros_arduino_ws/src"
 	* "cd ~/ros_arduino_ws"
