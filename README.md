@@ -121,10 +121,24 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 	* Close all terminals and open a new one. Write "roscore"
 	* Go to new terminal, "source ~/ros_open_cv_ws/devel/setup.bash"
 	* "rosrun ros_opencv camera_publisher.py"
-	* 
+	* "rosrun ros_opencv camera_subscriber.py"
+	* Then you will see the video frame from your camera.
 
-
-
+### ROS and Arduino
+#### How to start with ROS and Arduino
+1. Install the neccessary libraries. Go to the terminal and write these; 
+	* "sudo apt install ros-melodic-rosserial"
+	* "sudo apt install ros-melodic-rosserial-arduino"
+	* "sudo apt install ros-melodic-rosserial-python"
+2. Download the Arduino sofware. In Ubuntu, you can download it from Ubuntu Software. 
+3. Specify a folder to save whole Arduino sketchs and libraries. Open the Arduino sofware. Folder->Preferences->Sketchbook Location->/home/{username}/ArduinoSketches(you can create the folder manually)->Ok
+4. Install the Arduino ROS Communication Library. Go to the Arduino Software again. Sketch->Include Library->Manage Libraries->Search->"rosserial"->Rosserial Arduino Libray->Install
+5. Let's see the examples. File->Examples->Rosserial Arduino Library->HeloWorld. Then the example file will open automatically.
+6. There is a fix we need to do. Go to the path in file explorer "/home/{username}/ArduinoSketches/libraries/Rosserial_Arduino_Library/src/ros" and open the "msg.h" file.
+	* Change "#include <cstring>" line to this: "#include <string.h>". 
+	* (Line 68) Change this "std::memcpy(&val, &f, sizeof(val));" to "memcpy(&val, &f, sizeof(val));"
+	* (Line 182) Change this "std::memcpy(f, &val, sizeof(val));" to "memcpy(f, &val, sizeof(val));"
+7. Set the porper permissions for our communication port. 
 	
 
 ### Rosnode Commands:
