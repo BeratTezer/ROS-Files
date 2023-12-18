@@ -174,6 +174,7 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 	* Then open a new terminal then run "rosrun arduino_test_comm publisherArduino.py"
 	* Start the subscriber node. Open a new terminal; "source ~/ros_arduino_ws/devel/setup.bash" and write "rosrun arduino_test_comm subscriberArduino.py"
 
+## ROS Wireless Control and Remote Encoder Readings
 
 
 ### Commands
