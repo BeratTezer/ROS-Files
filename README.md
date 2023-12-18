@@ -177,7 +177,7 @@
 ## ROS Wireless Control and Remote Encoder Readings
 
 
-### Commands
+# Commands
 #### Rosnode Commands:
 	- rosnode list -> list active nodes
 	- rosnode ping -> test connectivity to node
