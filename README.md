@@ -103,7 +103,7 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 	* "mkdir -p ~/ros_open_cv_ws/src"
 	* "cd ~/ros_open_cv_ws"
 	* "catkin_make"
-	* "soruce ~/ros_open_cv_ws/devel/setup.bash"
+	* "source ~/ros_open_cv_ws/devel/setup.bash"
 	* "echo $ROS_PACKAGE_PATH" (~/ros_open_cv_ws/src:/opt/ros/melodic/share)
 7. Create a catkin package and nodes.
 	* "cd ~/ros_open_cv_ws/src"
@@ -115,8 +115,17 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 	* "chmod +x camera_publisher.py"
 	* "gedit camera_subscriber.py" (You can copy and paste it from ROS-OpenCV file)
 	* "chmod +x camera_subscriber.py"
+	* "gedit CMakeLists.txt" (Add the python scripts under Installation)
+	* Go to "cd ~/ros_open_cv_ws" and type "catkin_make"
+8. Testing.
+	* Close all terminals and open a new one. Write "roscore"
+	* Go to new terminal, "source ~/ros_open_cv_ws/devel/setup.bash"
+	* "rosrun ros_opencv camera_publisher.py"
 	* 
 
+
+
+	
 
 ### Rosnode Commands:
 	- rosnode list -> list active nodes
