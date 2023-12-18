@@ -1,11 +1,12 @@
-# ROS_Files
+# ROS Files
 
-## Creating a catkin Package
+### Basics
+#### Creating a catkin package
 1. Go to the path: "catkin_ws/src". If not exist, create manually.
 2. Then write and run this line: "catkin_create_pkg beginner_tutorials std_msgs rospy roscpp"
 3. Then the tutorial files will be created.
 
-## Creating Nodes in "roscore"
+#### Creating Nodes in "roscore"
 1. First write "roscore", it will start a master.
 2. Then go to the new terminal
 3. To create a turtle, write "rosrun turtlesim turtlesim_node"
@@ -15,7 +16,7 @@
 7. Getting the type of a node "rostopic type /turle1/cmd_vel" (cmd rostopic type {node name})
 8. To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (rosmsg show {node type})
 
-### Create Catkin Workspace and Create Packages
+#### Create Catkin Workspace and Create Packages
 1. Start by giving the source"source /opt/ros/melodic/setup.bash"
 2. Configurations the bash script "gedit ~/.bashrc"
 3. "echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc" thus this line you don't have to write "source /opt/ros/melodic/setup.bash" again and again.(It automatically source our ros enviroment when terminal starts)
