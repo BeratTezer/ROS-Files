@@ -1,5 +1,5 @@
 # Scripts:
-	## Publisher Node:
+## Publisher Node:
 	#!/usr/bin/env python2.7
 
 	import rospy
@@ -60,7 +60,7 @@
 	# Loop
 	rospy.spin()
 
-# Arduino Code:
+## Arduino Code:
 	/* This code will subscribe to the topic "information",
 	* then it will read messages from this topic. 
 	* The message is an integer. It will mulitply the integer by 2,
