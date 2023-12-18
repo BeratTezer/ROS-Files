@@ -135,18 +135,19 @@ To getting the data outputs of nodes write "rosmsg show geometry_msgs/Twist" (ro
 4. Install the Arduino ROS Communication Library. Go to the Arduino Software again. Sketch->Include Library->Manage Libraries->Search->"rosserial"->Rosserial Arduino Libray->Install
 5. Let's see the examples. File->Examples->Rosserial Arduino Library->HeloWorld. Then the example file will open automatically.
 6. There is a fix we need to do. Go to the path in file explorer "/home/{username}/ArduinoSketches/libraries/Rosserial_Arduino_Library/src/ros" and open the "msg.h" file.
-	* Change "#include <cstring>" line to this: "#include <string.h>". 
-	* (Line 68) Change this "std::memcpy(&val, &f, sizeof(val));" to "memcpy(&val, &f, sizeof(val));"
-	* (Line 182) Change this "std::memcpy(f, &val, sizeof(val));" to "memcpy(f, &val, sizeof(val));"
-7. Set the porper permissions for our communication port. 
-	
+	* Replace "#include <cstring>" line with this: "#include <string.h>". 
+	* (Line 68) Replace "std::memcpy(&val, &f, sizeof(val));" to "memcpy(&val, &f, sizeof(val));"
+	* (Line 182) Replace "std::memcpy(f, &val, sizeof(val));" to "memcpy(f, &val, sizeof(val));"
+7. Set the porper permissions for our communication port. Go to the terminal, write "sudo chmod 666 /dev/ttyACM0". To check the port we will communicate; go to the Arduino. Tools->Port->/dev/ttyACM0. If you can see this, that's mean it will work.
+8. Go to terminal and run "rosrun rosserial_python serial_node.py /dev/ttyACM0"
+9. Now it's working. To see that, run "rostopic echo /chatter"
+
+#### Python ROS Publisher and Subscriber Nodes and Interface with Arduino
+1. 
 
 
 
 
-
-
-	
 ### Commands
 #### Rosnode Commands:
 	- rosnode list -> list active nodes
