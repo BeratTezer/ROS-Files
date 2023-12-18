@@ -172,7 +172,23 @@ Explanation | Python script publishes integer to topic as "information" | -> | A
 	* Then open a new terminal then run "rosrun arduino_test_comm publisherArduino.py"
 	* Start the subscriber node. Open a new terminal; "source ~/ros_arduino_ws/devel/setup.bash" and write "rosrun arduino_test_comm subscriberArduino.py"
 
-## ROS Wireless Control and Remote Encoder Readings
+## ROS Tutorial on Remote Control and Remote Sensing of Differential Wheeled Robot by Using Arduino and Bluetooth
+ Nodes | Python Publisher | ROS | Arduino | ROS | Python Subscriber |
+--- | --- | --- | --- |--- |---
+Explanation | Python script publishes velocity commands to the topic: "left_motor_velocity" and "right_motor_velocity" | -> | Arduino subscribes to the topics "left_motor_velocity" and "right_motor_velocity" and receives velocity commands. It runs the motors. Arduino publishes encoder readings to the topics: "left_encoder_pulses" and "right_encoder_pulses" | -> | Python script subscribes to the topics: "left_encoder_pulse" and "right_encoder_pulses" and prints the encode readings to the screen |
+1. Create a Wrokspace and Create a Package
+	* "mkdir -p ~/ros_remote_ws/src"
+	* "cd ~/ros_remote_ws"
+	* "catkin_make"
+	* "source ~/ros_remote_ws/devel/setup.bash"
+	* "cd ~/ros_remote_ws/src"
+	* "catkin_create_pkg ros_remote_pkg std_msgs rospy roscpp"
+2. Create the publisher and subscriber files
+	* 
+
+
+
+
 
 
 # Commands
