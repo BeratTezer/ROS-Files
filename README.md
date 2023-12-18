@@ -1,6 +1,6 @@
 # ROS Files
 
-### Basics
+### Tutorial Files
 #### Creating a catkin package
 1. Go to the path: "catkin_ws/src". If not exist, create manually.
 2. Then write and run this line: "catkin_create_pkg beginner_tutorials std_msgs rospy roscpp"
