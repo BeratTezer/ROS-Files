@@ -184,7 +184,8 @@ Explanation | Python script publishes velocity commands to the topic: "left_moto
 	* "cd ~/ros_remote_ws/src"
 	* "catkin_create_pkg ros_remote_pkg std_msgs rospy roscpp"
 2. Create the publisher and subscriber files
-	* 
+	* "cd ~/ros_remote_ws/src/ros_remote_pkg/src"
+	* "gedit publisherArduino.py"
 
 
 
