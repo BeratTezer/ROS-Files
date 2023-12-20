@@ -194,7 +194,31 @@ Explanation | Python script publishes velocity commands to the topic: "left_moto
 	* "cd ~/ros_remote_ws/src/ros_remote_pkg/src"
 	* "gedit arduino_communication.ino" then save.
 	* Go to the file explorer and fill the code. You can also find the code in README.md
-4. 
+4.  Initialize the Bluetooth conneciton from a Linux terminal
+	* "sudo rdcomm connect /dev/rfcomm0 98:DA:60:08:2F:9F"
+		- "/dev/rfcomm0" is device name
+		- "/98:DA:60:08:2F:9F" is the adress of the device that etablishing the Bluetooth connection.
+	* If you cannot connect to the device, you should run this command "sduo rfcomm release 0". This will reset the communication port.
+5. Open Rosserial Communication
+	* Open a new terminal. Write "roscore"
+	* Open a new terminal, "rosrun rosserial_python serial_node.py _port=/dev/rfcomm=_baud:=9600"
+		- Baud rate must match the baud rate specified in Arduino
+	* Open a new terminal and tpye "rostopic list". You should see these:
+		- /diagnostics
+		- /left_encoder_pulses
+		- /left_motor_velocity
+		- /right_encoder_pulses
+		- /right_motor_velocity
+		- /rosout
+		- /rosout_agg
+6. Start the subscriber and publisher nodes.
+	* To start the subscriber node, open a new terminal and type:
+		- "source ~/ros_remote_ws/devel/setup.bash"
+		- "rosrun ros_remote_pkg subscriberArduino.py"
+	* To start the publisher node, open a new terminal and type:
+		- "source ~/ros_remote_ws/devel/setup.bash"
+		- "rosrun ros_remote_pkg publisherArduino.py"
+
 
 
 
