@@ -192,7 +192,7 @@ Explanation | Python script publishes velocity commands to the topic: "left_moto
 		- "chmod +x subscriberArduino.py"
 3. Write the Arduino Code.
 	* "cd ~/ros_remote_ws/src/ros_remote_pkg/src"
-	* "gedit arduino_communication.py" then save.
+	* "gedit arduino_communication.ino" then save.
 	* Go to the file explorer and fill the code. You can also find the code in README.md
 4. 
 
