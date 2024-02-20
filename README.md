@@ -31,7 +31,7 @@
 12. Then go to the upper directory and write "catkin_make" 
 13. Final step: Add workspace to the ROS environmet ". ~/Desktop/ROS_Files/my_workspace_ros/devel/setup.bash"
 
-### Creating Publisher and Subscriber Nodes and Connect
+### Creating Publisher and Subscriber Nodes and Their Connection
 #### Through a Topic in Python (File: Subscriber-and-Publisher-Nodes)
 1. "gedit ~/.bashrc" check the ROS environment is sourced. At the end you must see "source /opt/ros/melodic/setup.bash". If you don't, add manually or go to step 2 in previous section.
 2. Create workspace. "mkdir -p {full path or go to your main file and create new file like ros workspace}testros/src" (testros is the name of our workspace)
@@ -66,7 +66,7 @@
 		&nbsp&nbsp&nbspDESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}<br>
 		)<br>
 	</p>
-18. Test the publisher node. Now we neeed to run our master ros. Go to a new terminal and type "roscore".
+18. Test the publisher node. Now we need to run our master ros. Go to a new terminal and type "roscore".
 19. Go to the new terminal and go to test_ros path. Then type the test python script. Write "rosrun test_ros publisher_node.py" (If it says "Error: package 'test_ros' not found" write this and try again: "source ~/testros/devel/setup.bash
 ")
 20. Then go to the new terminal. Each we go to the new terminal, we gotta give our source again and again for our current project. Write "source ~/testros/devel/setup.bash".
@@ -90,7 +90,8 @@
 	* Go to new terminal. Write "source ~/testros/devel/setup.bash"
 	* Then write "rosrun test_ros subscriber_node.py"
 	* In the last terminal, we will see each received messages.
-<br><br><br>
+	
+
 
 ### ROS and OpenCV
 #### Robotics and Computer Vision in Python
@@ -219,9 +220,57 @@ Explanation | Python script publishes velocity commands to the topic: "left_moto
 		- "source ~/ros_remote_ws/devel/setup.bash"
 		- "rosrun ros_remote_pkg publisherArduino.py"
 
-
-
-
+### Control of Two-Wheeled Robot
+1. Create the file and workspace
+	* "mkdir -p control_of_two_wheeled_robot/src"
+	* "cd control_of_two_wheeled_robot/"
+	* "catkin_make"
+	* "source ~/control_of_two_wheeled_robot/devel/setup.bash"
+	* "cd src"
+	* "catkin_create_pkg control_of_two_wheeled_robot std_msgs rospy roscpp"
+	* "cd ~/control_of_two_wheeled_robot"
+	* "catkin_make"
+	- Source again
+	* "source ~/control_of_two_wheeled_robot/devel/setup.bash"
+2. Create the script files
+	* "cd src/control_of_two_wheeled_robot/src"
+	* "mkdir python_script"
+	* "gedit publisher_node.py" (You can find the content in related Readme.md file)
+	- Give the rights of the script
+	* "chmod +x publisher_node.py"
+3. Change the CMAKE file
+	* "cd .."
+	* "gedit CMakeLists.txt"
+	- Find these lines.
+		<p>
+			## Mark executable scripts (Python etc.) for installation<br>
+			## in contrast to setup.py, you can choose the destination<br>
+			# catkin_install_python(PROGRAMS<br>
+			#&nbsp&nbsp&nbspscripts/my_python_script<br>
+			#&nbsp&nbsp&nbspDESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}<br>
+			# )<br>
+		</p>
+	- Change the code as I do below.
+		<p>
+			## Mark executable scripts (Python etc.) for installation<br>
+			## in contrast to setup.py, you can choose the destination<br>
+			catkin_install_python(PROGRAMS<br>
+			&nbsp&nbsp&nbsppython_script/publisher_node.py # {this is your python scripts path. Better you give the full path}<br>
+			&nbsp&nbsp&nbspDESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}<br>
+			)<br>
+		</p>
+4. Test the script.
+	- Go to a new terminal
+	* "roscore"
+	- Go to another new terminal and give the source again
+	* "source ~/control_of_two_wheeled_robot/devel/setup.bash"
+	* "rosrun control_of_two_wheeled_robot publisher_node.py"
+	- If you can see "Success" in the end of the line, that mean it is okay. 
+5. Another python script.
+	- Return to the script file
+	* "cd ~/control_of_two_wheeled_robot/src/control_of_two_wheeled_robot/src"
+	
+	
 
 
 # Commands
