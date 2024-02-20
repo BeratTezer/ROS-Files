@@ -1,0 +1,8 @@
+prefix=/home/berat/control_of_two_wheeled_robot/install
+
+Name: control_of_two_wheeled_robot
+Description: Description of control_of_two_wheeled_robot
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

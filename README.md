@@ -227,20 +227,32 @@ Explanation | Python script publishes velocity commands to the topic: "left_moto
 	* "catkin_make"
 	* "source ~/control_of_two_wheeled_robot/devel/setup.bash"
 	* "cd src"
-	* "catkin_create_pkg control_of_two_wheeled_robot std_msgs rospy roscpp"
+	* "catkin_create_pkg control_of_two_wheeled_robot std_msgs rospy roscpp tf2 geometry_msgs urdf rviz joint_state_publisher_gui xacro"
 	* "cd ~/control_of_two_wheeled_robot"
 	* "catkin_make"
 	- Source again
 	* "source ~/control_of_two_wheeled_robot/devel/setup.bash"
-2. Create the script files
-	* "cd src/control_of_two_wheeled_robot/src"
+2. Create the robot.
+	* "cd ~/control_of_two_wheeled_robot/src/control_of_two_wheeled_robot/src"
+    * "mkdir urdf"
+    * "mkdir launch"
+    * "cd urdf"
+    * "gedit material_color.xacro". You can find the content in related README.md
+    * "gedit robot.xacro". You can find the content in related README.md
+	* "cd ~/control_of_two_wheeled_robot/src/control_of_two_wheeled_robot/launch"
+	* "gedit robot_xacro.launch" You can find the content in related README.md
+	- Return the original workspace
+	* "cd ~/control_of_two_wheeled_robot"
+	* "catkin_make"
+3. Create the script files
+	* "cd src/control_of_two_wheeled_robot"
 	- Create the script file
 	* "mkdir python_scripts"
 	* "cd python_scripts"
 	* "gedit publisher_node.py" (You can find the content in related Readme.md file)
 	- Give the rights of the script
 	* "chmod +x publisher_node.py"
-3. Change the CMAKE file
+4. Change the CMAKE file
 	* "cd .."
 	* "cd .."
 	* "gedit CMakeLists.txt"
@@ -262,20 +274,20 @@ Explanation | Python script publishes velocity commands to the topic: "left_moto
 			&nbsp&nbsp&nbspDESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}<br>
 			)<br>
 		</p>
-4. Test the script.
+5. Test the script.
 	- Go to a new terminal
 	* "roscore"
 	- Go to another new terminal and give the source again
 	* "source ~/control_of_two_wheeled_robot/devel/setup.bash"
 	* "rosrun control_of_two_wheeled_robot publisher_node.py"
 	- If you can see "Success" in the end of the line, that mean it is okay. 
-5. Another python script.
+6. Another python script.
 	- Return to the script file
-	* "cd ~/control_of_two_wheeled_robot/src/control_of_two_wheeled_robot/src/python_scripts"
+	* "cd ~/control_of_two_wheeled_robot/src/control_of_two_wheeled_robot/python_scripts"
 	* "gedit subscriber_node.py" (You can find the content in related Readme.md file)
 	- Give the rights of the script
 	* "chmod +x subscriber_node.py"
-6. Change the CMAKE file again.
+7. Change the CMAKE file again.
 	* "cd .."
 	* "cd .."
 	* "gedit CMakeLists.txt"
@@ -292,13 +304,13 @@ Explanation | Python script publishes velocity commands to the topic: "left_moto
 		<p>
 			## Mark executable scripts (Python etc.) for installation<br>
 			## in contrast to setup.py, you can choose the destination<br>
-			&nbsp&nbsp&nbspcatkin_install_python(PROGRAMS<br>
+			catkin_install_python(PROGRAMS<br>
 			&nbsp&nbsp&nbsppython_scripts/publisher_node.py<br>
 			&nbsp&nbsp&nbsppython_scripts/subscriber_node.py<br>
 			DESTINATION ${(Path of the src file which contain the python_scripts file)}<br>
 			)
 		</p>
-7. 
+		
 <!-- 
 TESTING: Do these.
 	* roscore
