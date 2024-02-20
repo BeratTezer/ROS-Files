@@ -281,21 +281,21 @@ Explanation | Python script publishes velocity commands to the topic: "left_moto
 	* "gedit CMakeLists.txt"
 	- Find these lines
 		<p>
-			## Mark executable scripts (Python etc.) for installation
-			## in contrast to setup.py, you can choose the destination
-			catkin_install_python(PROGRAMS
-			python_scripts/publisher_node.py
-			DESTINATION ${(Path of the src file which contain the python_scripts file)}
+			## Mark executable scripts (Python etc.) for installation<br>
+			## in contrast to setup.py, you can choose the destination<br>
+			catkin_install_python(PROGRAMS<br>
+			&nbsp&nbsp&nbsppython_scripts/publisher_node.py<br>
+			DESTINATION ${(Path of the src file which contain the python_scripts file)}<br>
 			)
 		</p>
 	- Change the code as I do
 		<p>
-			## Mark executable scripts (Python etc.) for installation
-			## in contrast to setup.py, you can choose the destination
-			catkin_install_python(PROGRAMS
-			python_scripts/publisher_node.py
-			python_scripts/subscriber_node.py
-			DESTINATION ${(Path of the src file which contain the python_scripts file)}
+			## Mark executable scripts (Python etc.) for installation<br>
+			## in contrast to setup.py, you can choose the destination<br>
+			&nbsp&nbsp&nbspcatkin_install_python(PROGRAMS<br>
+			&nbsp&nbsp&nbsppython_scripts/publisher_node.py<br>
+			&nbsp&nbsp&nbsppython_scripts/subscriber_node.py<br>
+			DESTINATION ${(Path of the src file which contain the python_scripts file)}<br>
 			)
 		</p>
 7. 
