@@ -234,11 +234,14 @@ Explanation | Python script publishes velocity commands to the topic: "left_moto
 	* "source ~/control_of_two_wheeled_robot/devel/setup.bash"
 2. Create the script files
 	* "cd src/control_of_two_wheeled_robot/src"
-	* "mkdir python_script"
+	- Create the script file
+	* "mkdir python_scripts"
+	* "cd python_scripts"
 	* "gedit publisher_node.py" (You can find the content in related Readme.md file)
 	- Give the rights of the script
 	* "chmod +x publisher_node.py"
 3. Change the CMAKE file
+	* "cd .."
 	* "cd .."
 	* "gedit CMakeLists.txt"
 	- Find these lines.
@@ -268,9 +271,44 @@ Explanation | Python script publishes velocity commands to the topic: "left_moto
 	- If you can see "Success" in the end of the line, that mean it is okay. 
 5. Another python script.
 	- Return to the script file
-	* "cd ~/control_of_two_wheeled_robot/src/control_of_two_wheeled_robot/src"
-	
-	
+	* "cd ~/control_of_two_wheeled_robot/src/control_of_two_wheeled_robot/src/python_scripts"
+	* "gedit subscriber_node.py" (You can find the content in related Readme.md file)
+	- Give the rights of the script
+	* "chmod +x subscriber_node.py"
+6. Change the CMAKE file again.
+	* "cd .."
+	* "cd .."
+	* "gedit CMakeLists.txt"
+	- Find these lines
+		<p>
+			## Mark executable scripts (Python etc.) for installation
+			## in contrast to setup.py, you can choose the destination
+			catkin_install_python(PROGRAMS
+			python_scripts/publisher_node.py
+			DESTINATION ${(Path of the src file which contain the python_scripts file)}
+			)
+		</p>
+	- Change the code as I do
+		<p>
+			## Mark executable scripts (Python etc.) for installation
+			## in contrast to setup.py, you can choose the destination
+			catkin_install_python(PROGRAMS
+			python_scripts/publisher_node.py
+			python_scripts/subscriber_node.py
+			DESTINATION ${(Path of the src file which contain the python_scripts file)}
+			)
+		</p>
+7. 
+<!-- 
+TESTING: Do these.
+	* roscore
+	* Go to new terminal. Write "source ~/testros/devel/setup.bash"
+	* Then write "rosrun test_ros publisher_node.py"
+	* Go to new terminal. Write "source ~/testros/devel/setup.bash"
+	* Then write "rosrun test_ros subscriber_node.py"
+	* In the last terminal, we will see each received messages. -->
+
+
 
 
 # Commands
