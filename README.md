@@ -220,7 +220,7 @@ Explanation | Python script publishes velocity commands to the topic: "left_moto
 		- "source ~/ros_remote_ws/devel/setup.bash"
 		- "rosrun ros_remote_pkg publisherArduino.py"
 
-### Control of Two-Wheeled Robot
+### Control of Two-Wheeled Robot in RVIZ
 1. Create the file and workspace
 	* "mkdir -p control_of_two_wheeled_robot/src"
 	* "cd control_of_two_wheeled_robot/"
@@ -233,7 +233,7 @@ Explanation | Python script publishes velocity commands to the topic: "left_moto
 	- Source again
 	* "source ~/control_of_two_wheeled_robot/devel/setup.bash"
 2. Create the robot.
-	* "cd ~/control_of_two_wheeled_robot/src/control_of_two_wheeled_robot/src"
+	* "cd ~/control_of_two_wheeled_robot/src/control_of_two_wheeled_robot"
     * "mkdir urdf"
     * "mkdir launch"
     * "cd urdf"
@@ -253,7 +253,6 @@ Explanation | Python script publishes velocity commands to the topic: "left_moto
 	- Give the rights of the script
 	* "chmod +x publisher_node.py"
 4. Change the CMAKE file
-	* "cd .."
 	* "cd .."
 	* "gedit CMakeLists.txt"
 	- Find these lines.
@@ -310,14 +309,14 @@ Explanation | Python script publishes velocity commands to the topic: "left_moto
 			DESTINATION ${(Path of the src file which contain the python_scripts file)}<br>
 			)
 		</p>
-		
+8. 
 <!-- 
 TESTING: Do these.
 	* roscore
-	* Go to new terminal. Write "source ~/testros/devel/setup.bash"
-	* Then write "rosrun test_ros publisher_node.py"
-	* Go to new terminal. Write "source ~/testros/devel/setup.bash"
-	* Then write "rosrun test_ros subscriber_node.py"
+	* Go to new terminal. Write "source ~/control_of_two_wheeled_robot/devel/setup.bash"
+	* Then write "rosrun control_of_two_wheeled_robot publisher_node.py"
+	* Go to new terminal. Write "source ~/control_of_two_wheeled_robot/devel/setup.bash"
+	* Then write "rosrun control_of_two_wheeled_robot subscriber_node.py"
 	* In the last terminal, we will see each received messages. -->
 
 

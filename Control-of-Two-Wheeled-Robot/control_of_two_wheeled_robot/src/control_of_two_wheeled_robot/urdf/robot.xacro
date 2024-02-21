@@ -28,7 +28,7 @@
 <xacro:property name="limits_prismatic_effort" value="300"/>
 
 <!-- Load material properties, in this case colors -->
-<xacro:include filename="$(find robot2_model_pkg)/urdf/material_color.xacro"/>
+<xacro:include filename="$(find control_of_two_wheeled_robot)/urdf/material_color.xacro"/>
 	<link name="base_link">
 		<visual>
 			<geometry>

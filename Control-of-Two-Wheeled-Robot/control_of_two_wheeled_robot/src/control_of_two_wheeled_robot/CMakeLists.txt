@@ -168,7 +168,7 @@ include_directories(
 catkin_install_python(PROGRAMS
   python_scripts/publisher_node.py
   python_scripts/subscriber_node.py
-  DESTINATION ${/home/berat/control_of_two_wheeled_robot/src/control_of_two_wheeled_robot/python_scripts}
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
 ## Mark executables for installation

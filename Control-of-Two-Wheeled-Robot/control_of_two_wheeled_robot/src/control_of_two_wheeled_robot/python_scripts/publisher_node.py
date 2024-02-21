@@ -14,7 +14,6 @@ nodeName = 'messagepublisher'
 topicName = 'information'
 
 # Here, we initialize our publisher node we call it as nodeName.
-
 # We set "anonymous=True" to ensure that the node has a unique name this option will add random numbers to the end of the publisher node that is, to the end of the nodeName.
 
 rospy.init_node(nodeName, anonymous=True)
