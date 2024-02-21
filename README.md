@@ -319,6 +319,14 @@ TESTING: Do these.
 	* Then write "rosrun control_of_two_wheeled_robot subscriber_node.py"
 	* In the last terminal, we will see each received messages. -->
 
+### Move robot with the pilz_command_planner
+1. Install Pilz robot package
+	- Open a terminal
+	* "sudo apt update"
+	* "sudo apt install ros-melodic-pilz-robots"
+
+
+
 
 
 
