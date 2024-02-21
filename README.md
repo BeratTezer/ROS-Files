@@ -353,6 +353,7 @@ TESTING: Do these.
 	- Open a terminal
 	* "sudo apt update"
 	* "sudo apt install ros-melodic-pilz-robots"
+	* "sudo apt install ros-melodic-pilz-robot-programming"
 	- Test it before next step
 	* "roslaunch prbt_moveit_config moveit_planning_execution.launch" This must be working properly.
 2. Create Application ROS Package

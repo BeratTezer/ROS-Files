@@ -1,0 +1,2 @@
+pilz_tutorial
+-DCATKIN_DEVEL_PREFIX=/home/berat/move_robot_with_python/devel -DCMAKE_INSTALL_PREFIX=/home/berat/move_robot_with_python/install -G Unix Makefiles
