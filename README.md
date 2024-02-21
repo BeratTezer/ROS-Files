@@ -343,10 +343,69 @@ TESTING: Do these.
 	- Complete the 
 	* "cd ~/move_robot_with_pilz"
 	* "catkin_make"
+	- Cite the source
+	* "source ~/move_robot_with_python/devel/setup.bash"
 5. Run
 	* "roslaunch pilz_tutorial my_application.launch"
 
-
+### Move robot with the Python API
+1. Install Pilz robot package
+	- Open a terminal
+	* "sudo apt update"
+	* "sudo apt install ros-melodic-pilz-robots"
+	- Test it before next step
+	* "roslaunch prbt_moveit_config moveit_planning_execution.launch" This must be working properly.
+2. Create Application ROS Package
+	* "mkdir -p ~/move_robot_with_python/src"
+	* "cd ~/move_robot_with_python/src"
+	* "catkin_create_pkg pilz_tutorial prbt_moveit_config"
+	- Load the stl file
+	* "cd ~/move_robot_with_python/src/pilz_tutorial"
+	* "mkdir -p urdf/meshes"
+	- Describe the robot
+	* "cd ~/move_robot_with_python/src/pilz_tutorial/urdf"
+	* "gedit my_first_application.xacro" Find the content in related Readme file
+	- Create a launch file to start up the robot environment
+	* "cd ~/move_robot_with_python/src/pilz_tutorial"
+	* "mkdir launch"
+	* "gedit launch/my_application.launch" Find the content in related Readme file
+	- Create the script folder and script file
+	* "cd ~/move_robot_with_python/src/pilz_tutorial"
+	* "mkdir scripts"
+	* "cd scripts"
+	* "gedit python_script.py" Find the content in related Readme file
+	* "chmod +x python_script.py"
+	- Change the CMakeLists.txt in pilz_tutorial
+	* "cd ~/move_robot_with_python/src/pilz_tutorial"
+	* "gedit CMakeLists.txt"
+	- Find these lines
+		<p>
+			## Mark executable scripts (Python etc.) for installation<br>
+			## in contrast to setup.py, you can choose the destination<br>
+			catkin_install_python(PROGRAMS<br>
+			&nbsp&nbsp&nbsppython_scripts/publisher_node.py<br>
+			DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}<br>
+			)
+		</p>
+	- Change the code as I do
+		<p>
+			## Mark executable scripts (Python etc.) for installation<br>
+			## in contrast to setup.py, you can choose the destination<br>
+			catkin_install_python(PROGRAMS<br>
+			&nbsp&nbsp&nbspcdscripts/python_script.py<br>
+			DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}<br>
+			)
+		</p>
+	- Complete the file 
+	* "cd ~/move_robot_with_python"
+	* "catkin_make"
+	- Cite the source
+	* "source ~/move_robot_with_python/devel/setup.bash"
+5. Run
+	* "roslaunch pilz_tutorial my_application.launch"
+	- Go to a new terminal and run the script, before the script cite the source again
+	* "source ~/move_robot_with_python/devel/setup.bash"
+	* "rosrun pilz_tutorial python_script.py"
 
 # Commands
 #### Rosnode Commands:
