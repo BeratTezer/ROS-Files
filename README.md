@@ -427,5 +427,3 @@ TESTING: Do these.
 	- rostopic list -> list active topics
 	- rostopic pub -> publish data to topic
 	- rostopic type -> print topic or field type
-
-
