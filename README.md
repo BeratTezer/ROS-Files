@@ -324,9 +324,27 @@ TESTING: Do these.
 	- Open a terminal
 	* "sudo apt update"
 	* "sudo apt install ros-melodic-pilz-robots"
-
-
-
+	- Test it before next step
+	* "roslaunch prbt_moveit_config moveit_planning_execution.launch" This must be working properly.
+2. Create Application ROS Package
+	* "mkdir -p ~/move_robot_with_pilz/src"
+	* "cd ~/move_robot_with_pilz/src"
+	* "catkin_create_pkg pilz_tutorial prbt_moveit_config"
+	- Load the stl file
+	* "cd ~/move_robot_with_pilz/src/pilz_tutorial"
+	* "mkdir -p urdf/meshes"
+	- Describe the robot
+	* "cd ~/move_robot_with_pilz/src/pilz_tutorial/urdf"
+	* "gedit my_first_application.xacro" Find the content in related Readme file
+	- Create a launch file to start up the robot environment
+	* "cd ~/move_robot_with_pilz/src/pilz_tutorial"
+	* "mkdir launch"
+	* "gedit launch/my_application.launch" Find the content in related Readme file
+	- Complete the 
+	* "cd ~/move_robot_with_pilz"
+	* "catkin_make"
+5. Run
+	* "roslaunch pilz_tutorial my_application.launch"
 
 
 

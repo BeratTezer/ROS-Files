@@ -1,0 +1,8 @@
+prefix=/home/berat/move_robot_with_pilz/devel
+
+Name: pilz_tutorial
+Description: Description of pilz_tutorial
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
