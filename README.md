@@ -309,15 +309,13 @@ Explanation | Python script publishes velocity commands to the topic: "left_moto
 			DESTINATION ${(Path of the src file which contain the python_scripts file)}<br>
 			)
 		</p>
-8. 
-<!-- 
-TESTING: Do these.
+8. TESTING: Do these.
 	* roscore
 	* Go to new terminal. Write "source ~/control_of_two_wheeled_robot/devel/setup.bash"
 	* Then write "rosrun control_of_two_wheeled_robot publisher_node.py"
 	* Go to new terminal. Write "source ~/control_of_two_wheeled_robot/devel/setup.bash"
 	* Then write "rosrun control_of_two_wheeled_robot subscriber_node.py"
-	* In the last terminal, we will see each received messages. -->
+	* In the last terminal, we will see each received messages.
 
 ### Move robot with the pilz_command_planner
 1. Install Pilz robot package
